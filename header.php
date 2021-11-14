@@ -188,12 +188,12 @@ session_start();
 							<div class="header-search">
 								<form>
 									<select class="input-select">
-										<option value="0">All Categories</option>
-										<option value="1">Men</option>
-										<option value="1">Women </option>
+										<option value="0">Danh mục</option>
+										<option value="1">IOS</option>
+										<option value="1">Android </option>
 									</select>
-									<input class="input" id="search" type="text" placeholder="Search here">
-									<button type="submit" id="search_btn" class="search-btn">Search</button>
+									<input class="input" id="search" type="text" placeholder="Tìm kiếm sản phẩm">
+									<button type="submit" id="search_btn" class="search-btn">Tìm</button>
 								</form>
 							</div>
 						</div>
@@ -208,7 +208,7 @@ session_start();
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 										<i class="fa fa-shopping-cart"></i>
-										<span>Your Cart</span>
+										<span>Giỏ hàng</span>
 										<div class="badge qty">0</div>
 									</a>
 									<div class="cart-dropdown"  >
@@ -218,7 +218,7 @@ session_start();
 										</div>
 										
 										<div class="cart-btns">
-												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>  edit cart</a>
+												<a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>Chỉnh sửa giỏ hàng</a>
 											
 										</div>
 									</div>
