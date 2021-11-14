@@ -10,8 +10,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 	$count = mysqli_num_rows($run_query);
     $row = mysqli_fetch_array($run_query);
 	$ip_add = getenv("REMOTE_ADDR");
-	$_SESSION["uid"] = $row["user_id"];
-	$_SESSION["name"] = $row["first_name"];
+	
 		
 	if($count == 1){
 		   	
@@ -35,6 +34,8 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 				
 			}
 			echo "login_success";
+		        $_SESSION["uid"] = $row["user_id"];
+	               $_SESSION["name"] = $row["first_name"];
 			
 			$BackToMyPage = $_SERVER['HTTP_REFERER'];
 				if(!isset($BackToMyPage)) {
