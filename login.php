@@ -2,9 +2,6 @@
 include "db.php";
 
 session_start();
-
-
-
 if(isset($_POST["email"]) && isset($_POST["password"])){
 	$email = mysqli_real_escape_string($con,$_POST["email"]);
 	$password = $_POST["password"];
@@ -12,8 +9,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 	$run_query = mysqli_query($con,$sql);
 	$count = mysqli_num_rows($run_query);
     $row = mysqli_fetch_array($run_query);
-		
-		$ip_add = getenv("REMOTE_ADDR");
+	$ip_add = getenv("REMOTE_ADDR");
 		
 	if($count == 1){
 		   	
@@ -51,7 +47,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 
 		}else{
                 $email = mysqli_real_escape_string($con,$_POST["email"]);
-                $password =md5($_POST["password"]) ;
+                
                 $sql = "SELECT * FROM admin_info WHERE admin_email = '$email' AND admin_password = '$password'";
                 $run_query = mysqli_query($con,$sql);
                 $count = mysqli_num_rows($run_query);
