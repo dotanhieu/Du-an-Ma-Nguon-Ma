@@ -10,8 +10,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 	$count = mysqli_num_rows($run_query);
     $row = mysqli_fetch_array($run_query);
 	$ip_add = getenv("REMOTE_ADDR");
-	$_SESSION["uid"] = $row["user_id"];
-	$_SESSION["name"] = $row["first_name"];
+	
 		
 	if($count == 1){
 		   	
@@ -35,14 +34,22 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 				
 			}
 			echo "login_success";
+<<<<<<< HEAD
+			$_SESSION["uid"] = $row["user_id"];
+	        $_SESSION["name"] = $row["first_name"];
+			$ip_add = getenv("REMOTE_ADDR");
+=======
+		        $_SESSION["uid"] = $row["user_id"];
+	               $_SESSION["name"] = $row["first_name"];
+>>>>>>> df884d8f39dc0be4d4a1ce2591c95b8385badef4
 			
 			$BackToMyPage = $_SERVER['HTTP_REFERER'];
-				if(!isset($BackToMyPage)) {
-					header('Location: '.$BackToMyPage);
-					echo"<script type='text/javascript'>
-					</script>";
-				} else {
-					header('Location: index.php');
+			if(!isset($BackToMyPage)) {
+				header('Location: '.$BackToMyPage);
+				echo"<script type='text/javascript'>
+				</script>";
+			} else {
+				echo "<script> location.href='index.php'; </script>";
 				} 
             exit;
 
