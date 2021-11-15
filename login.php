@@ -8,7 +8,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 	$sql = "SELECT * FROM user_info WHERE email = '$email' AND password = '$password'";
 	$run_query = mysqli_query($con,$sql);
 	$count = mysqli_num_rows($run_query);
-    $row = mysqli_fetch_array($run_query);
+        $row = mysqli_fetch_array($run_query);
 	$ip_add = getenv("REMOTE_ADDR");
 	
 		
@@ -35,7 +35,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 			}
 			echo "đăng nhập thành công";
 			$_SESSION["uid"] = $row["user_id"];
-	        $_SESSION["name"] = $row["first_name"];
+	                $_SESSION["name"] = $row["first_name"];
 			$ip_add = getenv("REMOTE_ADDR");
 			$BackToMyPage = $_SERVER['HTTP_REFERER'];
 			if(!isset($BackToMyPage)) {
@@ -45,7 +45,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 			} else {
 				echo "<script> location.href='index.php'; </script>";
 				} 
-            exit;
+                exit;
 
 		}else{
                 $email = mysqli_real_escape_string($con,$_POST["email"]);
@@ -60,13 +60,13 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
                 $_SESSION["uid"] = $row["admin_id"];
                 $_SESSION["name"] = $row["admin_name"];
                 $ip_add = getenv("REMOTE_ADDR");
-                    echo "login_success";
+                    echo "login thành công";
                     echo "<script> location.href='admin/addproduct.php'; </script>";
                     exit;
                 }else{
                 echo "<span style='color:red;'>Tài khoản hoặc mật khẩu không đúng...!</span>";
-		        echo "<span style='color:red;'>Vui lòng đăng kí trước khi đăng nhập...!</span>";
-                    exit();
+		echo "<span style='color:red;'>Vui lòng đăng kí trước khi đăng nhập...!</span>";
+                exit();
                 }
     
 	
