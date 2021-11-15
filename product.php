@@ -135,11 +135,11 @@ include "header.php";
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star-o"></i>
 								</div>
-								<a class="review-link" href="#review-form">10 Review(s) | Add your review</a>
+								<a class="review-link" href="#review-form">10 Đánh giá(s) | Đánh giá của bạn</a>
 							</div>
 							<div>
 								<h3 class="product-price">$'.$row['product_price'].'<del class="product-old-price">$9900.00</del></h3>
-								<span class="product-available">In Stock</span>
+								<span class="product-available">Còn hàng</span>
 							</div>
 							<p>'.$row['product_details'].'</p>
 
@@ -155,18 +155,18 @@ include "header.php";
 							</div>
 
 							<ul class="product-btns">
-								<li><a href="#"><i class="fa fa-heart-o"></i> add to wishlist</a></li>
-								<li><a href="#"><i class="fa fa-exchange"></i> add to compare</a></li>
+								<li><a href="#"><i class="fa fa-heart-o"></i> Thêm vào danh sách chọn</a></li>
+								<li><a href="#"><i class="fa fa-exchange"></i> Thêm sản phẩm so sánh</a></li>
 							</ul>
 
 							<ul class="product-links">
-								<li>Category:</li>
+								<li>Loại sản phẩm:</li>
 								<li><a href="#">'.$row['product_desc'].'</a></li>
 								
 							</ul>
 
 							<ul class="product-links">
-								<li>Share:</li>
+								<li>Chia sẻ:</li>
 								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -194,8 +194,8 @@ include "header.php";
 						<div id="product-tab">
 							<!-- product tab nav -->
 							<ul class="tab-nav">
-								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
-								<li><a data-toggle="tab" href="#tab2">Details</a></li>
+								<li class="active"><a data-toggle="tab" href="#tab1">Mô tả</a></li>
+								<li><a data-toggle="tab" href="#tab2">Chi tiết</a></li>
 								
 							</ul>
 							<!-- /product tab nav -->
@@ -240,7 +240,7 @@ include "header.php";
                     
 					<div class="col-md-12">
 						<div class="section-title text-center">
-							<h3 class="title">Related Products</h3>
+							<h3 class="title">Sản phẩm tương tự</h3>
 							
 						</div>
 					</div>
