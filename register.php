@@ -20,7 +20,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		
 		echo "
 			<div class='alert alert-warning'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>PLease Fill all fields..!</b>
+				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Vui lòng không được bỏ trống</b>
 			</div>
 		";
 		exit();
@@ -29,7 +29,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>this $f_name is not valid..!</b>
+				<b> $f_name : tên không hợp lệ..!</b>
 			</div>
 		";
 		exit();
@@ -38,7 +38,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>this $l_name is not valid..!</b>
+				<b> $l_name : tên không hợp lệ..!</b>
 			</div>
 		";
 		exit();
@@ -47,7 +47,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>this $email is not valid..!</b>
+				<b> $email : không hợp lệ..!</b>
 			</div>
 		";
 		exit();
@@ -56,7 +56,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Password is weak</b>
+				<b>Mật khẩu ít nhất là 5 kí tự</b>
 			</div>
 		";
 		exit();
@@ -65,7 +65,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Password is weak</b>
+				<b>Mật khẩu ít nhất là 5 kí tự</b>
 			</div>
 		";
 		exit();
@@ -74,7 +74,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>password is not same</b>
+				<b>Mật khẩu nhập lại không đúng</b>
 			</div>
 		";
 	}
@@ -82,7 +82,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Mobile number $mobile is not valid</b>
+				<b>this $mobile không hợp lệ</b>
 			</div>
 		";
 		exit();
@@ -91,7 +91,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Mobile number must be 10 digit</b>
+				<b> Số điện thoại phải là 10 số</b>
 			</div>
 		";
 		exit();
@@ -104,7 +104,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-danger'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Email Address is already available Try Another email address</b>
+				<b>Địa chỉ email đã được sử dụng</b>
 			</div>
 		";
 		exit();
@@ -122,7 +122,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		$sql = "UPDATE cart SET user_id = '$_SESSION[uid]' WHERE ip_add='$ip_add' AND user_id = -1";
 		if(mysqli_query($con,$sql)){
 			echo "register_success";
-			echo "<script> location.href='store.php'; </script>";
+			echo "<script> location.href='index.php'; </script>";
             exit;
 		}
 	}
