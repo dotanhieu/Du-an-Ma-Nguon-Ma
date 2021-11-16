@@ -35,7 +35,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 			}
 			echo "đăng nhập thành công";
 			$_SESSION["uid"] = $row["user_id"];
-	                $_SESSION["name"] = $row["first_name"];
+	        $_SESSION["name"] = $row["first_name"];
 			$ip_add = getenv("REMOTE_ADDR");
 			$BackToMyPage = $_SERVER['HTTP_REFERER'];
 			if(!isset($BackToMyPage)) {
@@ -65,7 +65,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
                     exit;
                 }else{
                 echo "<span style='color:red;'>Tài khoản hoặc mật khẩu không đúng...!</span>";
-		echo "<span style='color:red;'>Vui lòng đăng kí trước khi đăng nhập...!</span>";
+		        echo "<span style='color:red;'>Vui lòng đăng kí trước khi đăng nhập...!</span>";
                 exit();
                 }
     
