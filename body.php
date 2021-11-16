@@ -141,7 +141,7 @@
 								
                     
 					$product_query = "SELECT * FROM products,categories WHERE product_cat=cat_id AND product_id BETWEEN 1 AND 10";
-                $run_query = mysqli_query($con,$product_query);
+                    $run_query = mysqli_query($con,$product_query);
                 if(mysqli_num_rows($run_query) > 0){
 
                     while($row = mysqli_fetch_array($run_query)){
@@ -155,9 +155,6 @@
                         $cat_name = $row["cat_title"];
 
                         echo "
-				
-                        
-                                
 								<div class='product'>
 									<a href='product.php?p=$pro_id'><div class='product-img'>
 										<img src='product_images/$pro_image' style='max-height: 170px;' alt=''>
